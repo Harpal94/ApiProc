@@ -1,0 +1,30 @@
+<style>
+    .label {
+        font-size: medium;
+        font-weight: bold;
+    }
+</style>
+<div class="col-sm-7">
+    <h3> Student Insert</h3>
+</div>
+<hr>
+<div class="col-sm-7">
+    <label class=".label">Full Name</label>
+    <input type="text" class="form-control form-control-sm" [(ngModel)]="inststudent.name">
+</div>
+<div class="col-sm-5">
+    <label class=".label">Contact No</label>
+    <input type="text" class="form-control form-control-sm" [(ngModel)]="inststudent.mobileNo">
+</div>
+<div class="col-sm-5">
+    <label class=".label">Hobby</label>
+    <input type="text" class="form-control form-control-sm" [(ngModel)]="inststudent.hobby">
+</div>
+<div class="col-sm-2">
+    <label class=".label">IsActive</label>
+    <input type="text" class="form-control form-control-sm" [(ngModel)]="inststudent.isActive">
+</div>
+<br>
+<div class="col-sm-2">
+    <button value="Insert Record" class="btn btn-primary" (click)="RedirectList()">Save</button>
+</div>

@@ -1,0 +1,43 @@
+<table class="table table-hover">
+    <thead class="bg-primary">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Hobby</th>
+        <th>Active</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of objstudentget">
+            <td>{{obj.id}}</td>
+            <td>{{obj.name}}</td>
+            <td>{{obj.mobileNo}}</td>
+            <td>{{obj.hobby}}</td>
+            <td>{{obj.isActive}}</td>
+            <td>
+                <button [routerLink]="['/Updatestudent',obj.id]" class="btn btn-info" routerLinkActive="active">Edit
+                    Record</button> &nbsp;&nbsp;&nbsp;
+                <!-- <a href="#" [routerLink]="['/Updatestudent',obj.id]">Edit</a> -->
+                <button (click)="Delete(obj.id)" class="btn btn-info">Delete Record</button> 
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button value="Insert Record" class="btn btn-info" (click)="insertRecdirect()">Insert Record</button>
+
+
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open()">Open My Modal</button> -->
+<!-- 
+<div class="modal-header">
+    <h4 class="modal-title"></h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p> Helloo</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div> -->
